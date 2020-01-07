@@ -24,7 +24,7 @@ $(document).ready(function(){
   })
 
   $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
       $('.ajax-posts').append('<div class="row ajax-load"> <div class="row"> <div class="col-md-12"> <div class="row line-posts"> <div class="col-md-6"> <div class="related-post related-line"></div> </div> <div class="col-md-6"> <div class="related-post related-line"></div> </div> </div> </div> </div> <div class="col-md-3"> <div class="related-post related-cube"></div> </div> <div class="col-md-3"> <div class="related-post related-cube"></div> </div> <div class="col-md-3"> <div class="related-post related-cube"></div> </div> <div class="col-md-3"> <div class="related-post related-cube"></div> </div> <div class="row"> <div class="col-md-12"> <div class="row line-posts"> <div class="col-md-6"> <div class="related-post related-line"></div> </div> <div class="col-md-6"> <div class="related-post related-line"></div> </div> </div> </div> </div> <div class="col-md-3"> <div class="related-post related-cube"></div> </div> <div class="col-md-3"> <div class="related-post related-cube"></div> </div> <div class="col-md-3"> <div class="related-post related-cube"></div> </div> <div class="col-md-3"> <div class="related-post related-cube"></div> </div></div>');
       ymaps.ready(function(){
         var geolocation = ymaps.geolocation;
