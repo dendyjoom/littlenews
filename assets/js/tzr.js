@@ -351,7 +351,7 @@ function geoSet(selector){
 
 function appendTzr(selector){
   var tzr = tzrsUser[Math.floor(Math.random()*tzrsUser.length)];
-  $(selector).append('<a href="' + tzr.link + '?sub_id_2=' + tzr.id + location.search.replace('?', '&') + '"><img src="media/files/' + tzr.img + '"><p>' + tzr.text + '</p></a>');
+  $(selector).append('<a target="_blank" href="' + tzr.link + '?sub_id_2=' + tzr.id + location.search.replace('?', '&') + '"><img src="media/files/' + tzr.img + '"><p>' + tzr.text + '</p></a>');
 }
 
 $(function(){
