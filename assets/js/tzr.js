@@ -60,7 +60,7 @@ var tzrsAll = [
   },
   {
     enable: true,
-    filters: isGet('cost', '[BID]') && isGet('cost', '0') && isGet('cost', '[PRICE]'),
+    filters: true,
     link: 'https://loopmario.xyz/yfb6cL',
     list: [
       {
