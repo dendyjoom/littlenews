@@ -1,109 +1,319 @@
-// filters:  getQuery('cost') != '[BID]' &&
-//           getQuery('cost') != '0' &&
-//           getQuery('cost') != '[PRICE]',
+// filters:  isGet('cost', '[BID]') && isGet('cost', '0') && isGet('cost', '[PRICE]'),
 
 var tzrsAll = [
   {
     enable: true,
     filters: true,
+    link: 'https://loopmario.xyz/cr7fgP',
     list: [
       {
-        img: 'ketodiet1.jpg',
-        text: 'Смертельная ловушка! Врачи прогнозировали ей смерть через 2 года. Диета от диабета: 1 чайна ложка...',
-        link: 'https://loopmario.xyz/cr7fgP'
+        id: 1,
+        img: 'keto1.jpg',
+        text: 'Быстро сбросить вес можно. 1 раз в день натощак выпить 2 та...',
       },
       {
-        img: 'ketodiet2.jpg',
-        text: 'Личное интервью: как я убрала жирные ляшки и стала мисс <span class="geo" data-type="region"></span>',
-        link: 'https://loopmario.xyz/cr7fgP'
+        id: 2,
+        img: 'keto2.jpg',
+        text: 'Отличница из <span class="geo" data-type="city" data-dic="from">Москвы</span> изобрела простой способ похудения. 1 раз в день нужно...',
       },
       {
-        img: 'ketodiet3.jpg',
-        text: 'Врач из <span class="geo" data-type="city" data-dic="from"></span> рассказал рецепт похудения СССР. Рецепт: взболтать яичный белок и смешать с...',
-        link: 'https://loopmario.xyz/cr7fgP'
+        id: 3,
+        img: 'keto3.jpg',
+        text: 'Живот и лицо сами начнут худеть. А поможет в этом аптечный ш...',
       },
       {
-        img: 'ketodiet4.jpg',
-        text: 'Рецепт экстремального похудения от врача КГБ. Записывайте рецепт: 1 ложка меда, два зубчика...',
-        link: 'https://loopmario.xyz/cr7fgP'
+        id: 4,
+        img: 'keto4.jpg',
+        text: 'Потеряла вес, но не мужа. Рецепт: чайная ложка соды + чеснок и...',
       },
       {
-        img: 'ketodiet5.jpg',
-        text: 'Женщина из <span class="geo" data-type="city" data-dic="from"></span> повергла в шок все СМИ. Как удалось похудеть Нине и что из нее вышло...',
-        link: 'https://loopmario.xyz/cr7fgP'
+        id: 5,
+        img: 'keto5.jpg',
+        text: 'Жир сам будет уходить! Просто выпей...',
+      },
+      {
+        id: 6,
+        img: 'keto6.jpg',
+        text: 'Возрастной жир уйдет за 7 дней, нужно натощак...',
+      },
+      {
+        id: 7,
+        img: 'keto7.jpg',
+        text: 'Худеем за неделю без диет. Просто пьем чайн...',
+      },
+      {
+        id: 8,
+        img: 'keto8.jpg',
+        text: 'Малышева: для быстрого похудения - неделю пить...',
+      },
+      {
+        id: 9,
+        img: 'keto9.jpg',
+        text: 'Мясников: не бойтесь! Это избавит от возрастного жира за неделю! Нужно...',
+      },
+      {
+        id: 10,
+        img: 'keto10.jpg',
+        text: 'Минздрав открыл уникальный способ сброса веса. Обычная аптечная рома...',
       },
     ]
   },
   {
-    filters:  getQuery('cost') != '[BID]' &&
-              getQuery('cost') != '0' && 
-              getQuery('cost') != '[PRICE]',
     enable: true,
+    filters: isGet('cost', '[BID]') && isGet('cost', '0') && isGet('cost', '[PRICE]'),
+    link: 'https://loopmario.xyz/yfb6cL',
     list: [
       {
-        img: 'vnds1.jpg',
-        text: 'Банкоматы <span class="geo" data-type="region" data-dic="from"></span> пустеют. Люди активно выводят положенные им компенсации и выплаты...',
-        link: 'https://loopmario.xyz/J563Qz'
+        id: 11,
+        img: 'parazit1.jpg',
+        text: 'В <span class="geo" data-type="city" data-dic="in">Москве</span> ЭПИДЕМИЯ! Огромную опасность представляет новый вид...'
       },
       {
-        img: 'vnds2.jpg',
-        text: 'Министерство подтвердило ситуацию с выплатами и компенсациями. Они действительно доступны для получения с 1-го января',
-        link: 'https://loopmario.xyz/J563Qz'
+        id: 12,
+        img: 'parazit2.jpg',
+        text: 'Жук-убийца в <span class="geo" data-type="region" data-dic="in">Московской области</span>. Срочно нужно выпить чайну...'
       },
       {
-        img: 'vnds3.jpg',
-        text: 'Интервью: Я всю жизнь работала на заводе в <span class="geo" data-type="city" data-dic="in"></span> и наконец получила компенсацию...',
-        link: 'https://loopmario.xyz/J563Qz'
+        id: 13,
+        img: 'parazit3.jpg',
+        text: 'Мужчина в <span class="geo" data-type="city" data-dic="in">Москве</span> попал в кому из-за эпидемии. Он просто поел в...'
       },
       {
-        img: 'vnds4.jpg',
-        text: 'Внук из <span class="geo" data-type="city" data-dic="from"></span> получил компенсацию в несколько миллионов за свою бабушку и улетел из страны...',
-        link: 'https://loopmario.xyz/J563Qz'
+        id: 14,
+        img: 'parazit4.jpg',
+        text: 'Опасный паразит в <span class="geo" data-type="region" data-dic="in">Московской области</span> обитает в канализации по ул...'
       },
       {
-        img: 'vnds5.jpg',
-        text: 'Ольга Олеговна получила компенсацию и улетела в Париж к любовнику бросив наследников...',
-        link: 'https://loopmario.xyz/J563Qz'
+        id: 15,
+        img: 'parazit5.jpg',
+        text: 'Женщину из <span class="geo" data-type="city" data-dic="from">Москвы</span> забрали на скорой. Вот что в ней нашли после употребления...'
       },
+      {
+        id: 16,
+        img: 'parazit6.jpg',
+        text: 'В <span class="geo" data-type="city" data-dic="in">Москве</span> обнаружен паразит общепита. Он обитает в овощах из магазина пя...'
+      },
+      {
+        id: 17,
+        img: 'parazit7.jpg',
+        text: 'В <span class="geo" data-type="city" data-dic="in">Москве</span> из обычного прыща у мужчины начал лезть...'
+      },
+      {
+        id: 18,
+        img: 'parazit8.jpg',
+        text: 'От паразитов в организме поможет сода. Рецепт: чайная ложка...'
+      },
+      {
+        id: 19,
+        img: 'parazit9.jpg',
+        text: 'Медики в шоке что они нашли! Мужчина из <span class="geo" data-type="city" data-dic="from">Москвы</span> покупал продукты в магазине:...'
+      },
+      {
+        id: 20,
+        img: 'parazit10.jpg',
+        text: 'Забытый метод избавиться от паразитов. Секрет КГБ: взять мазь зв...'
+      },
+      {
+        id: 21,
+        img: 'parazit11.jpg',
+        text: 'В <span class="geo" data-type="city" data-dic="in">Москве</span> в обычном банане из магазина обнаружили ки...'
+      }
     ]
   },
   {
     enable: true,
     filters: true,
+    link: 'https://loopmario.xyz/Zgvxzk',
     list: [
       {
+        id: 22,
         img: 'molodost1.jpg',
-        text: 'Как я стала молодой в 55 лет. Личная история девушки из <span class="geo" data-type="city" data-dic="from"></span>. 2 раза в день нужно пить одну чайную ложку си...',
-        link: 'https://loopmario.xyz/Zgvxzk'
+        text: 'Избавиться от возрастных морщин можно! Нужно намазать место лыж...'
       },
       {
+        id: 23,
         img: 'molodost2.jpg',
-        text: 'Отличница из <span class="geo" data-type="city" data-dic="from"></span> на уроке химии изобрела омолаживающие средство. Рецепт: 1 ложка соды и...',
-        link: 'https://loopmario.xyz/Zgvxzk'
+        text: 'Мясников: от морщин в возрасте используйте копеечную аптечную мазь...'
       },
       {
+        id: 24,
         img: 'molodost3.jpg',
-        text: 'Народный рецепт молодости из <span class="geo" data-type="region" data-dic="from"></span>: семена черного перца смешать с...',
-        link: 'https://loopmario.xyz/Zgvxzk'
+        text: 'Отличница из <span class="geo" data-type="city" data-dic="from">Москвы</span> изобрела эликсир молодости: чеснок смешать с...'
       },
       {
+        id: 25,
         img: 'molodost4.jpg',
-        text: 'Имбирь с медом даст Вашим суставам второй шанс. Записывайте рецепт: 1 корень имбиря замочить...',
-        link: 'https://loopmario.xyz/Zgvxzk'
+        text: 'Ученые из СССР знали эликсир молодости! Забытое секретное свойство обычной кас...'
       },
       {
+        id: 26,
         img: 'molodost5.jpg',
-        text: 'Школьник из <span class="geo" data-type="city" data-dic="from"></span> для своей бабушки придумал рецепт молодости. Ученые не могут объяснить это явление! Он просто смешал чеснок с...',
-        link: 'https://loopmario.xyz/Zgvxzk'
+        text: 'Чтобы омолодить кожу лица, положите под язык советскую к...'
+      },
+      {
+        id: 27,
+        img: 'molodost6.jpg',
+        text: 'Рецепт молодости. Записывайте рецепт: растворить 1 чайную ложку ку...'
+      },
+      {
+        id: 28,
+        img: 'molodost7.jpg',
+        text: 'Минус 10 лет Вашей коже! Забытый секрет моделей СССР. Взять аптечный го...'
+      },
+      {
+        id: 29,
+        img: 'molodost8.jpg',
+        text: 'Секрет молодости КГБ: чеснок + горчичник смешать с...'
+      },
+      {
+        id: 30,
+        img: 'molodost9.jpg',
+        text: 'Пластический хирург из <span class="geo" data-type="region" data-dic="from">Московской области</span> показал как омолодить кожу! Нужно...'
+      },
+      {
+        id: 31,
+        img: 'molodost10.jpg',
+        text: 'Появились морщины? Записывайте рецепт: 1 чайна ложка...'
+      }
+    ]
+  },
+
+  {
+    enable: true,
+    filters: true,
+    link: 'https://loopmario.xyz/4c4Kqt',
+    list: [
+      {
+        id: 32,
+        img: 'sirodel1.jpg',
+        text: 'Многодетная мать из <span class="geo" data-type="city" data-dic="from">Москвы</span> заработала 2 миллиона на обычном домашнем сы...'
+      },
+      {
+        id: 33,
+        img: 'sirodel2.jpg',
+        text: 'Домашний сыр дома за 1 ночь. Рецепт: стакан молока смешать с...'
+      },
+      {
+        id: 34,
+        img: 'sirodel3.jpg',
+        text: 'Домашний пармезан. Очень простой рецепт: 1 пакетик твердого...'
+      },
+      {
+        id: 35,
+        img: 'sirodel4.jpg',
+        text: '<span class="geo" data-type="regiron">Московская область</span> шокирована тем, что делает эта девушка с сыром! Она берет...'
+      },
+      {
+        id: 36,
+        img: 'sirodel5.jpg',
+        text: 'Домашний сыр с зеленью. Записывайте рецепт: 3 веточки петрушки...'
+      },
+      {
+        id: 37,
+        img: 'sirodel6.jpg',
+        text: 'Сырные деньги. Она уже год поставляет домашний сыр в магазин пя...'
+      },
+      {
+        id: 38,
+        img: 'sirodel7.jpg',
+        text: 'Специальный репортаж: у нее не было ничего! Она просто начала зарабатывать на с...'
+      },
+      {
+        id: 39,
+        img: 'sirodel8.jpg',
+        text: 'Девочка из <span class="geo" data-type="city" data-dic="from">Москвы</span> изобрела уникальный рецепт домашнего сыра: ложка де...'
+      },
+      {
+        id: 40,
+        img: 'sirodel9.jpg',
+        text: 'Гений из школы №12 г. <span class="geo" data-type="city">Москва</span> изобрел идеальный рецепт домашнего сыра. Он...'
+      },
+      {
+        id: 41,
+        img: 'sirodel10.jpg',
+        text: 'Домашний сыр как хобби. Чтобы заработать миллион на продаже домашнего сыра нужно...'
+      },
+    ]
+  },
+
+  {
+    enable: true,
+    filters: true,
+    link: 'https://loopmario.xyz/KpBWvM',
+    list: [
+      {
+        id: 42,
+        img: 'klubnika1.jpg',
+        text: 'Многодетная мать из Москвы сделала миллион на...'
+      },
+      {
+        id: 43,
+        img: 'klubnika2.jpg',
+        text: 'Девочка из <span class="geo" data-type="city" data-dic="from">Москвы</span> заработала за месяц на квартиру с помощью...'
+      },
+      {
+        id: 44,
+        img: 'klubnika3.jpg',
+        text: 'Отличница из <span class="geo" data-type="city" data-dic="from">Москвы</span> отдала кредит за родителей. Миллионы уже заработаны с помощью...'
+      },
+      {
+        id: 45,
+        img: 'klubnika4.jpg',
+        text: 'Бабушку из <span class="geo" data-type="city" data-dic="from">Москвы</span> оштрафовали за производство клубники в особо крупном...'
+      },
+      {
+        id: 46,
+        img: 'klubnika5.jpg',
+        text: 'Женщина из <span class="geo" data-type="city" data-dic="from">Москвы</span> стала первым клубничным миллионером, а помог ей...'
+      },
+      {
+        id: 47,
+        img: 'klubnika6.jpg',
+        text: 'Клубника дома за неделю. Рецепт: семена замочить в...'
+      },
+      {
+        id: 48,
+        img: 'klubnika7.jpg',
+        text: 'Миллионеры из <span class="geo" data-type="city" data-dic="from">Москвы</span>. Месяц назад у них не было ничего, а сейчас...'
+      },
+      {
+        id: 49,
+        img: 'klubnika8.jpg',
+        text: 'Гений из <span class="geo" data-type="city" data-dic="from">Москвы</span>. Свой первый миллион я заработал в школе на обычной к...'
+      },
+      {
+        id: 50,
+        img: 'klubnika9.jpg',
+        text: 'Отборная клубника в домашних условиях зимой? Легко! Нужно...'
+      },
+      {
+        id: 51,
+        img: 'klubnika10.jpg',
+        text: 'Ягодное золото. Какие штрафы готовят тем, кто выращивает клубнику дома?'
       },
     ]
   },
 ];
 
+// Дальше ничего не трогать
+
 var tzrsUser = [];
 for (category in tzrsAll) {
   if(tzrsAll[category].filters && tzrsAll[category].enable){
-    tzrsUser = tzrsUser.concat(tzrsAll[category].list)
+    var tmpTzrs = tzrsAll[category].list;
+    for(tzr in tmpTzrs){
+      tmpTzrs[tzr]['link'] = tzrsAll[category].link;
+    }
+    tzrsUser = tzrsUser.concat(tmpTzrs)
+  }
+}
+
+// Клоака
+function isGet(p, v){
+  if(getQuery(p) == v){
+    return true;
+  }else{
+    return false;
   }
 }
 
@@ -141,7 +351,7 @@ function geoSet(selector){
 
 function appendTzr(selector){
   var tzr = tzrsUser[Math.floor(Math.random()*tzrsUser.length)];
-  $(selector).append('<a href="' + tzr.link + location.search + '"><img src="media/files/' + tzr.img + '"><p>' + tzr.text + '</p></a>');
+  $(selector).append('<a href="' + tzr.link + '?sub_id_2=' + tzr.id + location.search.replace('?', '&') + '"><img src="media/files/' + tzr.img + '"><p>' + tzr.text + '</p></a>');
 }
 
 $(function(){
@@ -153,15 +363,11 @@ $(function(){
 
 $(window).scroll(function() {
   if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
-    $('.ajax-posts').append('<div class="row ajax-load"> <div class="row"> <div class="col-md-12"> <div class="row line-posts"> <div class="col-md-6"> <div class="tzr line"></div> </div> <div class="col-md-6"> <div class="tzr line"></div> </div> </div> </div> </div> <div class="col-md-3"> <div class="tzr cube"></div> </div> <div class="col-md-3"> <div class="tzr cube"></div> </div> <div class="col-md-3"> <div class="tzr cube"></div> </div> <div class="col-md-3"> <div class="tzr cube"></div> </div> <div class="row"> <div class="col-md-12"> <div class="row line-posts"> <div class="col-md-6"> <div class="tzr line"></div> </div> <div class="col-md-6"> <div class="tzr line"></div> </div> </div> </div> </div> <div class="col-md-3"> <div class="tzr cube"></div> </div> <div class="col-md-3"> <div class="tzr cube"></div> </div> <div class="col-md-3"> <div class="tzr cube"></div> </div> <div class="col-md-3"> <div class="tzr cube"></div> </div></div>');
-    ymaps.ready(function(){
-      var geolocation = ymaps.geolocation;
-
+    $('.ajax-posts').append('<div class="row ajax-load"><div class="row"><div class="col-md-12"><div class="row line-posts"><div class="col-md-6"><div class="tzr line"></div></div><div class="col-md-6"><div class="tzr line"></div></div></div></div></div><div class="col-md-3"><div class="tzr cube"></div></div><div class="col-md-3"><div class="tzr cube"></div></div><div class="col-md-3"><div class="tzr cube"></div></div><div class="col-md-3"><div class="tzr cube"></div></div><div class="row"><div class="col-md-12"><div class="row line-posts"><div class="col-md-6"><div class="tzr line"></div></div><div class="col-md-6"><div class="tzr line"></div></div></div></div></div><div class="col-md-3"><div class="tzr cube"></div></div><div class="col-md-3"><div class="tzr cube"></div></div><div class="col-md-3"><div class="tzr cube"></div></div><div class="col-md-3"><div class="tzr cube"></div></div></div>');
       $('.ajax-posts .ajax-load:last-child .tzr').each(function(){
         appendTzr($(this));
       });
       geoSet('.ajax-posts .ajax-load:last-child');
-    });
     
   }
 });
