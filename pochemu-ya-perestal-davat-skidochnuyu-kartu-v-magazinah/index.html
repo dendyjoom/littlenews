@@ -31,7 +31,7 @@
           $('.tzr').each(function(){
             var tzr = $(this);
             //teaserImgPath
-            $.get("", function(data){
+            $.get("https://loopmario.xyz/zfZF1X", function(data){
               var tzrHTML = $($.parseHTML(data)).attr('href', $($.parseHTML(data)).attr('href') + location.search.replace('?', '&'));
               var macrosList = $(tzrHTML).text().match(/\[.*?\]/g);
               for(mid in macrosList){
