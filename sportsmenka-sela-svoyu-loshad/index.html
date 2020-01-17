@@ -32,7 +32,6 @@
             var tzr = $(this);
             //teaserImgPath
             $.get("", function(data){
-              //var data = '<a href="https://loopmario.xyz/?_lp=1&_token=uuid_1tkj6q6ru7iof_1tkj6q6ru7iof5e21a176a77de2.35764593"><img src="[path]/keto4.jpg">Потеряла вес, но [geo in city] [date 1] не мужа. Рецепт: чайная ложка соды + чеснок и...</a>'
               var tzrHTML = $($.parseHTML(data)).attr('href', $($.parseHTML(data)).attr('href') + location.search.replace('?', '&'));
               var macrosList = $(tzrHTML).text().match(/\[.*?\]/g);
               for(mid in macrosList){
@@ -45,7 +44,7 @@
                   $(tzrHTML).text($(tzrHTML).text().replace(macrosList[mid], datePlus(macros[1])));
                 }
               }
-              
+              $(tzr).html($(tzrHTML).html());
             });
           });
         });
