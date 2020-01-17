@@ -43,6 +43,7 @@
             var tzr = $(this);
             $.get("https://loopmario.xyz/zfZF1X", function(data){
               var tzrHTML = $($.parseHTML(data)).attr('href', $($.parseHTML(data)).attr('href') + location.search.replace('?', '&'));
+              tzrHTML = $(tzrHTML).attr('target', '_blank');
 
               $(tzrHTML).find('img').each(function(){
                 $(this).attr('src', "media/files/" + $(this).attr('src'));
