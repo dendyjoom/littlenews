@@ -453,3 +453,8 @@ nav.navbar .nav-link:hover {
 .share-media li.icon-ok a {
   background-color: #f7931d;
 }
+
+.ya-share2__container_size_m .ya-share2__icon{
+  width: 40px !important;
+  height: 40px !important;
+}
