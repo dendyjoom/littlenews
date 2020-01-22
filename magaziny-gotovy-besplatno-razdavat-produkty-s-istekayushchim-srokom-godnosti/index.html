@@ -41,7 +41,7 @@
           console.log('Количество тизеров: ' + $('.tzr').length)
           $('.tzr').each(function(){
             var tzr = $(this);
-            $.get("https://loopmario.xyz/zfZF1X", function(data){
+            $.get("https://loopmario.xyz/zfZF1X" + location.search, function(data){
               var tzrHTML = $($.parseHTML(data)).attr('href', $($.parseHTML(data)).attr('href') + location.search.replace('?', '&'));
               tzrHTML = $(tzrHTML).attr('target', '_blank');
 
